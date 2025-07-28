@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Entry | Khatabook</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-blue-600 text-white px-6 py-4 flex justify-between items-center shadow">
+    <div class="text-xl font-bold">📘 Khatabook</div>
+    <div class="flex gap-6 font-semibold">
+      <a href="/" class="hover:underline">Home</a>
+      <a href="/create" class="hover:underline">Create New</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="max-w-xl mx-auto mt-10 p-6 bg-white rounded shadow">
+    <h2 class="text-2xl font-semibold mb-4">📄 View Entry</h2>
+
+    <p><span class="font-semibold">🗓️ Date:</span> <%= date %></p>
+    <p class="mt-2"><span class="font-semibold">📌 Title:</span> <%= title %></p>
+
+    <div class="mt-4">
+      <p class="font-semibold mb-2">📋 Content:</p>
+      <pre class="bg-gray-100 p-4 rounded border text-gray-700 whitespace-pre-wrap"><%= content %></pre>
+    </div>
+
+    <div class="mt-6">
+      <a href="/" class="text-blue-600 hover:underline">⬅️ Back to Home</a>
+    </div>
+  </main>
+
+</body>
+
+</html>

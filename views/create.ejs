@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create New Entry</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-blue-600 text-white px-6 py-4 flex justify-between items-center shadow">
+    <div class="text-xl font-bold">📘 Khatabook</div>
+    <div class="flex gap-6 font-semibold">
+      <a href="/" class="hover:underline">Home</a>
+      <a href="/create" class="hover:underline">Create New</a>
+      <a href="/hisab" class="hover:underline">Hisab</a>
+    </div>
+  </nav>
+
+  <!-- Main Form -->
+  <main class="max-w-xl mx-auto mt-10 p-6 bg-white rounded shadow">
+    <h2 class="text-2xl font-semibold mb-6">📝 Create New Hisab Entry</h2>
+
+    <form action="/createhisab" method="POST" class="flex flex-col gap-4">
+  
+  <label class="font-medium">Date</label>
+  <input type="date" name="date" class="p-2 border rounded" required>
+
+  <label class="font-medium">Title</label>
+  <input type="text" name="title" class="p-2 border rounded" placeholder="Enter title e.g. Grocery, Electricity" required>
+
+  <label class="font-medium">Details</label>
+  <textarea name="content" rows="6" class="p-2 border rounded" placeholder="Enter transaction details..." required></textarea>
+
+  <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+    💾 Save Entry
+  </button>
+</form>
+
+  </main>
+
+</body>
+</html>
