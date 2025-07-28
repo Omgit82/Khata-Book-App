@@ -114,6 +114,15 @@ app.get("/hisab/:filename", function (req, res) {
   });
 
 });  
+app.get("/delete/:filename", function (req, res) {
+  const filePath = path.join(__dirname, "hisab", req.params.filename);
+
+  fs.unlink(filePath, function (err) {
+    if (err) return res.status(500).send("Error deleting file");
+    res.redirect("/");
+  });
+});
+
 
 
 
